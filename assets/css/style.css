@@ -20,16 +20,9 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
-/* .debug .content {
-
-    header {
-        border: 1px solid #a9f92f;
-    }
-} */
-
-.debug .bottom {
+/* .debug .bottom {
     border: 1px solid green;
-}
+} */
 
 .col-12 {
     width: 100%;
@@ -38,7 +31,6 @@ body {
 .col-6 {
     width: calc((100% / 12) * 6);
 }
-
 
 .d-flex {
     display: flex;
@@ -82,6 +74,19 @@ body {
             justify-content: space-between;
             height: 100%;
 
+            .images {
+                span {
+                    font-size: .8rem;
+                }
+
+                p {
+                    font-size: .8rem;
+                    color: var(--text-color);
+                    padding: .4rem;
+                    display: none;
+                }
+            }
+
             img {
                 width: 25px;
                 margin-left: .5rem;
@@ -118,7 +123,6 @@ body {
             position: sticky;
             top: 0;
             opacity: 0.6;
-            position: relative;
             padding: 2.5rem 0;
 
             .title-header {
@@ -149,11 +153,7 @@ body {
             div {
                 padding-right: .6rem;
                 margin: 0 auto;
-
-              /*   span {
-                    padding-top: 0rem;
-                padding-bottom: .5rem;
-                } */
+                /* comportamento não adequado */
 
                 hr {
                     background-color: var(--border-greenyellow);
@@ -188,6 +188,7 @@ body {
         .for-you,
         .recently-played {
             padding: 1rem 0;
+
             span {
                 font-size: .6rem;
                 display: block;
@@ -202,7 +203,8 @@ body {
             h2 {
                 padding-bottom: .8rem;
             }
-            span{
+
+            span {
                 text-align: center;
             }
         }
@@ -213,6 +215,49 @@ body {
 .bottom {
     height: 80px;
     background-color: var(--footer-bg);
+
+    .app-bottom {
+        img {
+            width: 40px;
+            padding-top: 1rem;
+        }
+
+        h5 {
+            color: var(--title-color);
+            padding-top: 1rem;
+        }
+
+        h5,
+        span {
+            padding-left: .4rem;
+        }
+
+        span {
+            display: block;
+            font-size: .8rem;
+            color: var(--text-color);
+        }
+
+        i {
+            color: var(--title-color);
+            padding: .4rem;
+        }
+
+        .icon-center {
+            justify-content: center;
+
+            i {
+                font-size: 1.4rem;
+            }
+        }
+
+        .control-instrument-play {
+            span {
+                display: none;
+            }
+        }
+    }
+
 }
 
 
@@ -269,11 +314,6 @@ body {
                             padding: 1rem 0 0 .4rem;
                         }
 
-                        p {
-                            color: var(--text-color);
-                            padding: .4rem 0 .4rem .6rem;
-                        }
-
                         .create-playlist {
                             padding: .3rem 0 1rem .4rem;
 
@@ -285,14 +325,23 @@ body {
                                 text-align: center;
                             }
                         }
+
+                        p {
+                            display: block;
+                        }
                     }
                 }
 
                 .download-profile {
                     color: var(--text-color);
 
+                    img {
+                        margin-left: .2rem;
+                    }
+
                     span {
                         padding-left: .6rem;
+                        font-size: .8rem;
 
                         strong {
                             color: var(--title-color);
@@ -321,6 +370,53 @@ body {
     .col-s-3 {
         width: calc((100% / 12) * 3);
     }
+
+    .container-s {
+        width: 100%;
+    }
+
+    .col-s-4 {
+        width: calc((100% / 12) * 4);
+    }
+
+    .app-bottom {
+
+        .icon-center {
+
+            .control-instrument-play {
+                span {
+                    display: inline;
+                }
+
+                .control-instrument {
+                    border: 2px solid;
+                    width: 190px;
+                    border-radius: 3px;
+                }
+
+                .instrument {
+                    background-color: var(--text-color);
+                    width: 50px;
+                    border: 1px solid;
+                }
+            }
+
+        }
+
+
+        .icon-rigth {
+            i{
+                display: block;
+            }
+            .control-instrument-vol {
+                border: 2px solid;
+                width: 100px;
+                border-radius: 3px;
+            }
+        }
+
+    }
+
 }
 
 @media screen and (min-width: 700px) {
@@ -328,5 +424,3 @@ body {
         width: calc((100% / 12) * 2);
     }
 }
-
-@media screen and (min-width: 1200px) {}
