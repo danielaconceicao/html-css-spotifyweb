@@ -19,9 +19,9 @@ body {
     overflow: hidden;
 }
 
-.debug .sidebar {
+/* .debug .sidebar {
     border: 1px solid blue;
-}
+} */
 
 .debug .content {
     border: 1px solid red;
@@ -29,6 +29,10 @@ body {
 
 .debug .bottom {
     border: 1px solid green;
+}
+
+.col-6 {
+    width: calc((100% - 12) * 6);
 }
 
 
@@ -87,13 +91,11 @@ body {
             }
 
             .profile {
-                background-color: var(--text-color);
-                border-radius: 50px;
-                width: 35px;
-                margin: auto;
-
                 img {
-                    width: 20px;
+                    width: 25px;
+                    background-color: var(--text-color);
+                    border: 1px solid transparent;
+                    border-radius: 100%;
                 }
             }
 
@@ -168,11 +170,11 @@ body {
 
                         p {
                             color: var(--text-color);
-                            padding: .4rem 0 .4rem .7rem;
+                            padding: .4rem 0 .4rem .6rem;
                         }
 
                         .create-playlist {
-                            padding: .3rem 0 1rem .5rem;
+                            padding: .3rem 0 1rem .4rem;
 
                             i {
                                 background-color: var(--text-color);
@@ -185,10 +187,23 @@ body {
                     }
                 }
 
-                .download-profile{
+                .download-profile {
                     color: var(--text-color);
-                    span{
-                        padding-left: .3rem;
+
+                    span {
+                        padding-left: .6rem;
+
+                        strong {
+                            color: var(--title-color);
+                        }
+                    }
+
+                    .divisor {
+                        height: 1px;
+                        color: var(--text-color);
+                        border: 1px solid;
+                        width: 95%;
+                        margin: .3rem .2rem;
                     }
                 }
 
