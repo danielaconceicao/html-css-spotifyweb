@@ -19,25 +19,30 @@ body {
     overflow: hidden;
 }
 
-/* .debug .sidebar {
-    border: 1px solid blue;
-} */
-
 .debug .content {
     border: 1px solid red;
+
+    header {
+        border: 1px solid #a9f92f;
+    }
 }
 
 .debug .bottom {
     border: 1px solid green;
 }
 
+.col-12{
+    width: 100%;
+}
+
 .col-6 {
-    width: calc((100% - 12) * 6);
+    width: calc((100% / 12) * 6);
 }
 
 
 .d-flex {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .align-center {
@@ -53,8 +58,7 @@ body {
 }
 
 .container {
-    display: flex;
-    justify-content: space-between;
+    width: 90%;
     margin: auto;
 }
 
@@ -106,6 +110,63 @@ body {
         width: calc(100% - 50px);
         overflow-y: auto;
         background-color: var(--main-bg);
+
+        header {
+            padding: 1.4rem 0;
+            background-color: var(--header-bg);
+            position: sticky;
+            top: 0;
+            opacity: 0.5;
+            position: relative;
+            padding: 2.5rem 0;
+            .title-header {
+                width: 210px;
+                border: 1px solid #fff;
+                border-radius: 50px;
+                position: absolute;
+                right: 1px;
+                top: 25px;
+                h2 {
+                    color: var(--title-color);
+                    font-size: .8rem;
+                    padding: .4rem;
+                    text-align: center;
+                }
+            }
+
+        }
+
+        h1{
+            color: var(--title-color);
+            padding: .8rem 0;
+            font-size: 1.4rem;
+        }
+
+        h2{
+            font-size: .8rem;
+            text-align: center;
+            color: var(--title-color);
+        }
+
+        span{
+            font-size: .6rem;
+            display: block;
+            text-align: center;
+            color: var(--text-color);
+            padding-top: .3rem;
+        }
+
+        img{
+            width: 100%;
+        }
+
+
+        .sound-choices {
+            color: var(--text-color);
+            padding: 1rem 0;
+            gap: .8rem;
+            font-size: .8rem;
+        }
     }
 }
 
@@ -199,7 +260,6 @@ body {
                     }
 
                     .divisor {
-                        height: 1px;
                         color: var(--text-color);
                         border: 1px solid;
                         width: 95%;
