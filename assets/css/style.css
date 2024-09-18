@@ -5,54 +5,203 @@
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --main-bg: #141922;
     --sidebar-bg: #000000;
     --footer-bg: #282828;
     --header-bg: #080b12;
     --text-color: #707277;
     --title-color: #ffffff;
+    --border-greenyellow: #a9f92f;
 }
 
 body {
     overflow: hidden;
+}
+
+.debug .sidebar {
+    border: 1px solid blue;
+}
+
+.debug .content {
+    border: 1px solid red;
+}
+
+.debug .bottom {
+    border: 1px solid green;
+}
+
+
+.d-flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.list {
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.wrapper {
     height: 100vh;
 }
 
-.ml-xs{
-    margin-left: 50px;
-}
-
-
-#sidebar {
-    border: 1px dashed rgb(17, 12, 90);
-    width: 50px;
+.top {
+    display: flex;
     height: calc(100% - 80px);
-    margin-bottom: 80px;
-    position: fixed;
-    background-color: var(--sidebar-bg);
 
-    @media screen and (min-width: 600px) {
-        width: 245px;
+    .sidebar {
+        height: 100%;
+        background-color: var(--sidebar-bg);
+        width: 50px;
+        padding: .6rem 0;
+
+        .sidenav {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+
+            img {
+                width: 25px;
+                margin-left: .5rem;
+                padding: .3rem 0;
+            }
+
+            span,
+            h4,
+            .logo-s {
+                display: none;
+            }
+
+            .profile {
+                background-color: var(--text-color);
+                border-radius: 50px;
+                width: 35px;
+                margin: auto;
+
+                img {
+                    width: 20px;
+                }
+            }
+
+        }
+    }
+
+    .content {
+        width: calc(100% - 50px);
+        overflow-y: auto;
+        background-color: var(--main-bg);
     }
 }
 
-#app-main {
-    border: 1px dashed red;
-    background-color: var(--main-bg); 
-    width: 100% - 80;
-    height: calc(100% - 80px);
-    margin-left: 50px;
-
-    @media screen and (min-width: 600px) {
-       margin-left: 245px;
-    }
-}
-
-#app-footer {
-    border: 1px dashed;
-    background-color: var(--footer-bg);
+.bottom {
     height: 80px;
-    width: 100%;
-    position: fixed;
+    background-color: var(--footer-bg);
 }
+
+
+
+
+
+@media screen and (min-width: 600px) {
+    .top {
+        .sidebar {
+            width: 245px;
+
+            .sidenav {
+
+                span,
+                h4 {
+                    display: block;
+                }
+
+                .profile {
+                    margin: 0;
+                    margin-left: .2rem;
+                }
+
+                .images {
+                    color: var(--title-color);
+
+                    .logo {
+                        .logo-xs {
+                            display: none;
+                        }
+
+                        .logo-s {
+                            display: block;
+                            width: 120px;
+                            padding: .3rem 0 .8rem 0;
+                        }
+                    }
+
+                    span {
+                        padding-left: .2rem;
+                        color: var(--text-color);
+                    }
+
+                    .home-image {
+                        border-left: 1px solid var(--border-greenyellow);
+                    }
+
+                    .text-home-color {
+                        color: var(--title-color);
+                    }
+
+                    .playlist {
+                        h4 {
+                            padding: 1rem 0 0 .4rem;
+                        }
+
+                        p {
+                            color: var(--text-color);
+                            padding: .4rem 0 .4rem .7rem;
+                        }
+
+                        .create-playlist {
+                            padding: .3rem 0 1rem .5rem;
+
+                            i {
+                                background-color: var(--text-color);
+                                color: var(--header-bg);
+                                width: 1.4rem;
+                                padding: .2rem 0;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+
+                .download-profile{
+                    color: var(--text-color);
+                    span{
+                        padding-left: .3rem;
+                    }
+                }
+
+            }
+
+        }
+
+        .content {
+            width: calc(100% - 245px);
+        }
+    }
+}
+
+@media screen and (min-width: 700px) {}
+
+@media screen and (min-width: 1200px) {}
