@@ -37,16 +37,16 @@ body {
     align-items: center;
 }
 
+.justify-between {
+    justify-content: space-between;
+}
+
 .list {
     list-style: none;
 }
 
 .link {
     text-decoration: none;
-}
-
-.back {
-    display: none;
 }
 
 .container {
@@ -139,6 +139,8 @@ body {
             z-index: 1000;
             opacity: 0.6;
             padding: 2.5rem 0;
+            overflow: hidden;
+            transition: 0.5s;
 
             .title-header {
                 width: 210px;
@@ -160,6 +162,10 @@ body {
                 }
             }
 
+            .title-header:hover {
+                scale: 1.1;
+            }
+
         }
 
         /* end  header space*/
@@ -168,12 +174,12 @@ body {
         /* musical genere choice space*/
         .sound-choices {
             padding: .8rem 0;
-            row-gap: 1.2rem;
             font-size: .7rem;
             font-weight: 700;
 
             ul {
                 gap: 1rem;
+                justify-content: center;
 
                 li {
                     a {
@@ -277,25 +283,39 @@ body {
     background-color: var(--footer-bg);
 
     .app-bottom {
-        img {
-            width: 40px;
-            padding-top: 1rem;
-        }
 
-        h5 {
-            color: var(--title-color);
-            padding-top: 1rem;
-        }
+        .icon-left {
+            img {
+                width: 40px;
+                /* padding-top: 1rem; */
+            }
 
-        h5,
-        span {
-            padding-left: .4rem;
-        }
+            h5 {
+                color: var(--title-color);
+                padding-top: 1rem;
+            }
 
-        span {
-            display: block;
-            font-size: .8rem;
-            color: var(--text-color);
+            h5,
+            span {
+                padding-left: .4rem;
+            }
+
+            span {
+                display: block;
+                font-size: .8rem;
+                color: var(--text-color);
+            }
+
+            .icon-hidden {
+
+                i {
+                    color: var(--text-color);
+                }
+
+                i:hover {
+                    scale: 1.1;
+                }
+            }
         }
 
         i {
@@ -305,9 +325,23 @@ body {
 
         .icon-center {
             justify-content: center;
+            flex-direction: column;
+            transition: .5s ease;
+
+            .icon-play:hover {
+                scale: 1.1;
+            }
 
             i {
                 font-size: 1.4rem;
+            }
+        }
+
+        .icon-rigth {
+            justify-content: end;
+
+            .hidden {
+                display: none;
             }
         }
 
@@ -319,9 +353,6 @@ body {
     }
 
 }
-
-
-
 
 
 @media screen and (min-width: 600px) {
@@ -454,6 +485,16 @@ body {
             width: calc(100% - 245px);
         }
     }
+
+    .bottom {
+        .app-bottom {
+            .icon-rigth {
+                .hidden {
+                    display: block;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 640px) {
@@ -475,24 +516,21 @@ body {
         .icon-center {
 
             .control-instrument-play {
-                position: relative;
-
                 span {
                     display: inline;
                 }
 
                 .control-instrument {
                     border: 2px solid;
-                    width: 190px;
+                    width: 200px;
                     border-radius: 3px;
-                    position: absolute;
                     top: 30px;
                     right: 50px;
                 }
 
                 .instrument {
                     background-color: var(--text-color);
-                    width: 50px;
+                    width: 20px;
                     border: 1px solid;
                 }
             }
@@ -520,4 +558,32 @@ body {
     .col-lg-2 {
         width: calc((100% / 12) * 2);
     }
+
+    .bottom {
+        .app-bottom {
+            .icon-left {
+                span {
+                    display: inline;
+                    padding-left: .2rem;
+                }
+
+                .icon-hidden:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+
+.left {
+    background-color: #a9f92f;
+}
+
+.center {
+    background-color: aqua;
+}
+
+.right {
+    background-color: blue;
 }
