@@ -1,3 +1,4 @@
+/* utility classes */
 * {
     margin: 0;
     padding: 0;
@@ -20,12 +21,10 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
-.col-12 {
-    width: 100%;
-}
-
-.col-6 {
-    width: calc((100% / 12) * 6);
+/* Layout grid system with flex box */
+.container {
+    width: 92%;
+    margin: auto;
 }
 
 .d-flex {
@@ -41,6 +40,17 @@ body {
     justify-content: space-between;
 }
 
+.col-12 {
+    width: 100%;
+}
+
+.col-6 {
+    width: calc((100% / 12) * 6);
+}
+
+/* and Layout grid system with flex box */
+
+/* common classes */
 .list {
     list-style: none;
 }
@@ -49,14 +59,11 @@ body {
     text-decoration: none;
 }
 
-.container {
-    width: 92%;
-    margin: auto;
-}
-
 .wrapper {
     height: 100vh;
 }
+
+/* and common classes */
 
 /* mobile first */
 .top {
@@ -287,7 +294,7 @@ body {
         .icon-left {
             img {
                 width: 40px;
-                /* padding-top: 1rem; */
+                padding-top: 1rem;
             }
 
             h5 {
@@ -295,9 +302,8 @@ body {
                 padding-top: 1rem;
             }
 
-            h5,
-            span {
-                padding-left: .4rem;
+            .ml-3 {
+                margin-left: .8rem;
             }
 
             span {
@@ -307,6 +313,8 @@ body {
             }
 
             .icon-hidden {
+                display: none;
+                margin-top: 1rem;
 
                 i {
                     color: var(--text-color);
@@ -335,6 +343,18 @@ body {
             i {
                 font-size: 1.4rem;
             }
+
+            .control-instrument-play {
+                span {
+                    display: none;
+                }
+
+                .control-left,
+                .control-right {
+                    color: var(--title-color);
+                    display: none;
+                }
+            }
         }
 
         .icon-rigth {
@@ -345,11 +365,7 @@ body {
             }
         }
 
-        .control-instrument-play {
-            span {
-                display: none;
-            }
-        }
+
     }
 
 }
@@ -561,29 +577,38 @@ body {
 
     .bottom {
         .app-bottom {
+            padding: 0 1rem;
+
             .icon-left {
                 span {
                     display: inline;
-                    padding-left: .2rem;
                 }
 
-                .icon-hidden:hover{
+                .text-color:hover span {
+                    color: #ffff;
+                }
+
+                a:hover {
                     text-decoration: underline;
+                    color: var(--title-color);
+                }
+
+                .icon-hidden {
+                    display: block;
+                    padding-left: 1rem;
                 }
             }
+
+            .icon-center {
+                .control-instrument-play {
+
+                    .control-left,
+                    .control-right {
+                        display: block;
+                    }
+                }
+            }
+
         }
     }
-}
-
-
-.left {
-    background-color: #a9f92f;
-}
-
-.center {
-    background-color: aqua;
-}
-
-.right {
-    background-color: blue;
 }
