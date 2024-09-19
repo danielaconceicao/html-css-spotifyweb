@@ -49,6 +49,10 @@ body {
     text-decoration: none;
 }
 
+.back {
+    display: none;
+}
+
 .container {
     width: 92%;
     margin: auto;
@@ -134,17 +138,20 @@ body {
                 top: 25px;
 
                 h1 {
-                    color: var(--title-color);
                     font-size: .8rem;
                     padding: .4rem;
                     text-align: center;
+
+                    a {
+                        color: var(--title-color);
+                    }
+
                 }
             }
 
         }
 
         .sound-choices {
-            color: var(--text-color);
             padding: .8rem 0;
             row-gap: 1.2rem;
             font-size: .7rem;
@@ -160,7 +167,10 @@ body {
                     height: 1.4px;
                     width: 30px;
                     margin: .2rem auto;
+                }
 
+                a {
+                    color: var(--text-color);
                 }
             }
         }
@@ -176,12 +186,33 @@ body {
             color: var(--title-color);
         }
 
+        .middle {
+            transition: .5s ease;
+            position: absolute;
+            opacity: 0;
+            bottom: 84%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--title-color);
+            font-size: 2rem;
+            display: none;
+        }
+
         .card {
+            a {
+                position: relative;
+            }
+
             img {
                 width: 100%;
                 padding-right: .5rem;
                 padding-top: .5rem;
+                transition: .5s ease;
             }
+        }
+
+        a:hover {
+            opacity: .4;
         }
 
         .populari,
@@ -379,11 +410,21 @@ body {
         width: calc((100% / 12) * 4);
     }
 
+    .content {
+        a:hover .middle {
+            opacity: 1;
+            display: block;
+        }
+    }
+
+
     .app-bottom {
 
         .icon-center {
 
             .control-instrument-play {
+                position: relative;
+
                 span {
                     display: inline;
                 }
@@ -392,6 +433,9 @@ body {
                     border: 2px solid;
                     width: 190px;
                     border-radius: 3px;
+                    position: absolute;
+                    top: 30px;
+                    right: 50px;
                 }
 
                 .instrument {
@@ -405,9 +449,10 @@ body {
 
 
         .icon-rigth {
-            i{
+            i {
                 display: block;
             }
+
             .control-instrument-vol {
                 border: 2px solid;
                 width: 100px;
