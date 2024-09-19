@@ -10,7 +10,7 @@
     --sidebar-bg: #000000;
     --footer-bg: #282828;
     --header-bg: #080b12;
-    --text-color: #707277;
+    --text-color: #757679;
     --title-color: #ffffff;
     --border-greenyellow: #a9f92f;
 }
@@ -19,10 +19,6 @@ body {
     overflow: hidden;
     font-family: "Montserrat", sans-serif;
 }
-
-/* .debug .bottom {
-    border: 1px solid green;
-} */
 
 .col-12 {
     width: 100%;
@@ -62,12 +58,12 @@ body {
     height: 100vh;
 }
 
+/* mobile first */
 .top {
     display: flex;
     height: calc(100% - 80px);
 
     .sidebar {
-        height: 100%;
         background-color: var(--sidebar-bg);
         width: 50px;
         padding: .6rem 0;
@@ -78,16 +74,27 @@ body {
             justify-content: space-between;
             height: 100%;
 
-            .images {
+            .menu {
                 span {
                     font-size: .8rem;
                 }
 
-                p {
-                    font-size: .8rem;
-                    color: var(--text-color);
-                    padding: .4rem;
-                    display: none;
+                ul {
+
+                    li {
+                        font-size: .8rem;
+                        padding: .4rem;
+                        display: none;
+
+                        a {
+                            color: var(--text-color);
+                        }
+                    }
+
+                }
+
+                li:hover a {
+                    color: var(--title-color);
                 }
             }
 
@@ -97,22 +104,24 @@ body {
                 padding: .3rem 0;
             }
 
+            /* hiding the sidebar elements */
             span,
-            h4,
+            .playlist,
             .logo-s {
                 display: none;
             }
 
-            .profile {
-                img {
-                    width: 25px;
-                    background-color: var(--text-color);
-                    border: 1px solid transparent;
-                    border-radius: 200px;
-                    padding: .2rem;
+            .download-profile {
+                .profile {
+                    img {
+                        width: 25px;
+                        background-color: var(--text-color);
+                        border: 1px solid transparent;
+                        border-radius: 200px;
+                        padding: .2rem;
+                    }
                 }
             }
-
         }
     }
 
@@ -126,6 +135,7 @@ body {
             background-color: var(--header-bg);
             position: sticky;
             top: 0;
+            z-index: 1000;
             opacity: 0.6;
             padding: 2.5rem 0;
 
@@ -157,10 +167,14 @@ body {
             font-size: .7rem;
             font-weight: 700;
 
-            div {
-                padding-right: .6rem;
-                margin: 0 auto;
-                /* comportamento não adequado */
+            ul {
+                gap: 1rem;
+
+                li {
+                    a {
+                        color: var(--text-color);
+                    }
+                }
 
                 hr {
                     background-color: var(--border-greenyellow);
@@ -169,8 +183,8 @@ body {
                     margin: .2rem auto;
                 }
 
-                a {
-                    color: var(--text-color);
+                li:hover a {
+                    color: var(--title-color);
                 }
             }
         }
@@ -203,17 +217,24 @@ body {
                 position: relative;
             }
 
+            .player:hover .middle {
+                display: block;
+                opacity: 1;
+            }
+
             img {
                 width: 100%;
                 padding-right: .5rem;
                 padding-top: .5rem;
                 transition: .5s ease;
             }
+
+            a:hover {
+                opacity: .4;
+            }
         }
 
-        a:hover {
-            opacity: .4;
-        }
+
 
         .populari,
         .for-you,
@@ -239,7 +260,6 @@ body {
                 text-align: center;
             }
         }
-
     }
 }
 
@@ -301,18 +321,11 @@ body {
             width: 245px;
 
             .sidenav {
-
-                span,
-                h4 {
+                span {
                     display: block;
                 }
 
-                .profile {
-                    margin: 0;
-                    margin-left: .2rem;
-                }
-
-                .images {
+                .menu {
                     color: var(--title-color);
 
                     .logo {
@@ -341,12 +354,26 @@ body {
                     }
 
                     .playlist {
+                        display: block;
+
                         h4 {
                             padding: 1rem 0 0 .4rem;
                         }
 
+                        ul {
+
+                            li {
+                                display: block;
+                            }
+
+                        }
+
                         .create-playlist {
                             padding: .3rem 0 1rem .4rem;
+
+                            span {
+                                display: block;
+                            }
 
                             i {
                                 background-color: var(--text-color);
@@ -355,16 +382,29 @@ body {
                                 padding: .2rem 0;
                                 text-align: center;
                             }
+
+                            .profile {
+                                margin: 0;
+                                margin-left: .2rem;
+                            }
                         }
 
-                        p {
-                            display: block;
+                        .create-playlist:hover span {
+                            color: var(--title-color);
                         }
+
+                        .create-playlist:hover i {
+                            background-color: var(--title-color);
+                        }
+
                     }
                 }
 
                 .download-profile {
-                    color: var(--text-color);
+
+                    a {
+                        color: var(--text-color);
+                    }
 
                     img {
                         margin-left: .2rem;
@@ -387,6 +427,9 @@ body {
                     }
                 }
 
+                .hover-text:hover span {
+                    color: #fff;
+                }
             }
 
         }
@@ -411,7 +454,7 @@ body {
     }
 
     .content {
-        a:hover .middle {
+        .player:hover .middle {
             opacity: 1;
             display: block;
         }

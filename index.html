@@ -16,30 +16,41 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body class="debug">
+<body>
     <div class="wrapper">
+        <!-- top of the site -->
         <div class="top">
             <div class="sidebar">
+                <!-- navegation menu -->
                 <div class="sidenav">
-                    <div class="images">
+                    <div class="menu">
+                        <!-- logo spotify -->
                         <div class="logo">
                             <a href="#">
                                 <img class="logo-xs" src="assets/img/logo-small.svg" alt="logo spotify">
                                 <img class="logo-s" src="assets/img/logo.svg" alt="logo spotify">
                             </a>
                         </div>
+
+                        <!-- home image -->
                         <div class="d-flex align-center home-image">
                             <img src="assets/img/home.svg" alt="image home">
                             <a href="#" class="link"><span class="text-home-color">Home</span></a>
                         </div>
-                        <div class="d-flex align-center">
-                            <img src="assets/img/search.svg" alt="image home">
+
+                        <!-- search image -->
+                        <div class="d-flex align-center hover-text">
+                            <img src="assets/img/search.svg" alt="image search">
                             <a href="#" class="link"><span>Cerca</span></a>
                         </div>
-                        <div class="d-flex align-center">
-                            <img src="assets/img/libreria.svg" alt="image home">
+
+                        <!-- library image -->
+                        <div class="d-flex align-center hover-text">
+                            <img src="assets/img/libreria.svg" alt="image libreria">
                             <a href="#" class="link"><span>la tua libreria</span></a>
                         </div>
+
+                        <!-- playlist space -->
                         <div class="playlist">
                             <h4>PLAYLIST</h4>
                             <div class="create-playlist">
@@ -48,22 +59,31 @@
                                     <span>Crea Playlist</span>
                                 </a>
                             </div>
-                            <div>
-                                <p>Nome Playlist</p>
-                                <p>Nome Playlist</p>
-                                <p>Nome Playlist</p>
-                                <p>Nome Playlist</p>
-                                <p>Nome Playlist</p>
-                                <p>Nome Playlist</p>
-                            </div>
+                            <!-- list playlist space -->
+                            <ul class="list">
+                                <!-- é uma lista -->
+                                <li><a href="#" class="link">Nome Playlist</a></li>
+                                <li><a href="#" class="link">Nome Playlist</a></li>
+                                <li><a href="#" class="link">Nome Playlist</a></li>
+                                <li><a href="#" class="link">Nome Playlist</a></li>
+                                <li><a href="#" class="link">Nome Playlist</a></li>
+                                <li><a href="#" class="link">Nome Playlist</a></li>
+                            </ul>
                         </div>
                     </div>
+
+                    <!-- bottom of the sidebar part -->
+
+                    <!-- download image -->
                     <div class="download-profile">
-                        <div class="d-flex align-center">
+                        <div class="d-flex align-center hover-text">
                             <img src="assets/img/download.svg" alt="image download">
                             <a href="#" class="link"><span>Installa app</span></a>
                         </div>
+
+                        <!-- divisor -->
                         <hr class="divisor">
+                        <!-- avatar image -->
                         <div class="profile d-flex align-center">
                             <img src="assets/img/profile.svg" alt="image login">
                             <span><strong>John Doe</strong></span>
@@ -71,7 +91,9 @@
                     </div>
                 </div>
             </div>
+            <!-- top part of the rigth side -->
             <div class="content">
+                <!-- header space -->
                 <header>
                     <div class="title-header">
                         <h1>
@@ -79,147 +101,161 @@
                         </h1>
                     </div>
                 </header>
+
+                <!-- sidebar content right side -->
                 <div class="container">
-                    <div class="">
-                        <div class="col-12">
-                            <div class="d-flex sound-choices">
-                                <div>
-                                    <span>
-                                        <a href="#" class="link">IN EVIDENZA</a>
-                                    </span>
-                                    <hr class="divisor">
-                                </div>
-                                <div><a href="#" class="link"><span>PODCAST</span></a></div>
-                                <div><a href="#" class="link"><span>CLASSIFICHE</span></a></div>
-                                <div><a href="#" class="link"><span>GENERI E MOOD</span></a></div>
-                                <div><a href="#" class="link"><span>NUOVE USCITE</span></a></div>
-                                <div><a href="#" class="link"><span>SCOPRI</span></a></div>
+                    <div class="col-12">
+                        <!-- musical genere choice space -->
+                        <div class="d-flex sound-choices">
+                            <ul class="list d-flex">
+                                <li>
+                                    <a href="#" class="link">IN EVIDENZA</a>
+                                    <div><hr class="divisor"></div>
+                                </li>
+                                <li><a href="#" class="link">PODCAST</a></li>
+                                <li><a href="#" class="link">CLASSIFICHE</a></li>
+                                <li><a href="#" class="link">GENERI E MOOD</a></li>
+                                <li><a href="#" class="link">NUOVE USCITE</a></li>
+                                <li><a href="#" class="link">SCOPRI</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- recently played -->
+                    <div class="recently-played">
+                        <h2>Recently played</h2>
+                        <div class="d-flex">
+                            <!-- recently played card-->
+                            <div class="col-6 col-s-3 col-lg-2 card">
+                                <a href="#" class="link">
+                                    <div class="player">
+                                        <img src="assets/img/metal_lifting.jpg" alt="cover heavy metal">
+                                        <div class="middle"><i class="fa-regular fa-circle-play"></i></div>
+                                    </div>
+                                </a>
+                                <h3>Heavy Metal</h3>
+                                <span>Subtitle</span>
+                            </div>
+                            <!-- recently played card-->
+                            <div class="col-6 col-s-3 col-lg-2 card">
+                                <a href="#" class="link">
+                                    <div class="player">
+                                        <img src="assets/img/stranger.jpeg" alt="cover stranger">
+                                        <div class="middle"><i class="fa-regular fa-circle-play"></i></div>
+                                    </div>
+                                </a>
+                                <h3>Stranger things, vol.1(a Netflix Original Series SoundTrack)</h3>
+                                <span>Kyle dixon & Michael Stein</span>
+                            </div>
+                            <!-- recently played card-->
+                            <div class="col-6 col-s-3 col-lg-2 card">
+                                <a href="#" class="link">
+                                    <div class="player">
+                                        <img src="assets/img/aquietplace.jpeg" alt="cover aquietplace">
+                                        <div class="middle"><i class="fa-regular fa-circle-play"></i></div>
+                                    </div>
+                                </a>
+                                <h3>A quiet place</h3>
+                                <span>Subtitle</span>
+                            </div>
+                            <!-- recently played card-->
+                            <div class="col-6 col-s-3 col-lg-2 card">
+                                <a href="#" class="link">
+                                    <a href="#" class="link">
+                                        <div class="player">
+                                            <img src="assets/img/split.jpeg" alt="cover split">
+                                            <div class="middle"><i class="fa-regular fa-circle-play"></i></div>
+                                        </div>
+                                    </a>
+                                    <h3>Split</h3>
+                                    <span>Subtitle</span>
+                                </a>
+                            </div>
+                            <!-- recently played card-->
+                            <div class="col-6 col-s-3 card col-lg-2">
+                                <a href="#" class="link">
+                                    <div class="player">
+                                        <img src="assets/img/cure.jpeg" alt="cover cure">
+                                        <div class="middle"><i class="fa-regular fa-circle-play"></i></div>
+                                    </div>
+                                </a>
+                                <h3>A cure for wellness</h3>
+                                <span>Subtitle</span>
+                            </div>
+                            <!-- recently played card-->
+                            <div class="col-6 col-s-3 col-lg-2 card">
+                                <a href="#" class="link">
+                                    <div class="player">
+                                        <img src="assets/img/sinister.jpeg" alt="cover sinister">
+                                        <div class="middle"><i class="fa-regular fa-circle-play"></i></div>
+                                    </div>
+                                </a>
+                                <h3>Sinister</h3>
+                                <span>Subtitle</span>
                             </div>
                         </div>
-
-                        <div class="recently-played">
-
-                            <h2>Recently played</h2>
-
-                            <div class="d-flex">
-                                <div class="col-6 col-s-3 col-lg-2 card">
-                                    <a href="#" class="link">
-                                        <div class="player">
-                                            <img src="assets/img/metal_lifting.jpg" alt="cover heavy metal">
-                                            <div class="middle"><i class="fa-regular fa-circle-play"></i></div>
-                                        </div>
-                                    </a>
-                                    <h3>Heavy Metal</h3>
-                                    <span>Subtitle</span>
-                                </div>
-                                <div class="col-6 col-s-3 col-lg-2 card">
-                                    <a href="#" class="link">
-                                        <div class="player">
-                                            <img src="assets/img/stranger.jpeg" alt="">
-                                            <div class="middle"><i class="fa-regular fa-circle-play"></i></div>
-                                        </div>
-                                    </a>
-                                    <h3>Stranger things, vol.1(a Netflix Original Series SoundTrack)</h3>
-                                    <span>Kyle dixon & Michael Stein</span>
-                                </div>
-                                <div class="col-6 col-s-3 col-lg-2 card">
-                                    <a href="#" class="link">
-                                        <div class="player">
-                                            <img src="assets/img/aquietplace.jpeg" alt="cover heavy metal">
-                                            <div class="middle"><i class="fa-regular fa-circle-play"></i></div>
-                                        </div>
-                                    </a>
-                                    <h3>A quiet place</h3>
-                                    <span>Subtitle</span>
-                                </div>
-                                <div class="col-6 col-s-3 col-lg-2 card">
-                                    <a href="#" class="link">
-                                        <a href="#" class="link">
-                                            <div class="player">
-                                                <img src="assets/img/split.jpeg" alt="cover heavy metal">
-                                                <div class="middle"><i class="fa-regular fa-circle-play"></i></div>
-                                            </div>
-                                        </a>
-                                        <h3>Split</h3>
-                                        <span>Subtitle</span>
-                                    </a>
-                                </div>
-                                <div class="col-6 col-s-3 card col-lg-2">
-                                    <a href="#" class="link">
-                                        <div class="player">
-                                            <img src="assets/img/cure.jpeg" alt="cover heavy metal">
-                                            <div class="middle"><i class="fa-regular fa-circle-play"></i></div>
-                                        </div>
-                                    </a>
-                                    <h3>A cure for wellness</h3>
-                                    <span>Subtitle</span>
-                                </div>
-                                <div class="col-6 col-s-3 col-lg-2 card">
-                                    <a href="#" class="link">
-                                        <div class="player">
-                                            <img src="assets/img/sinister.jpeg" alt="cover heavy metal">
-                                            <div class="middle"><i class="fa-regular fa-circle-play"></i></div>
-                                        </div>
-                                    </a>
-                                    <h3>Sinister</h3>
-                                    <span>Subtitle</span>
-                                </div>
+                    </div>
+                    <!-- space created for jhon -->
+                    <div class="for-you">
+                        <h2>Creato per John Doe</h2>
+                        <span>Più ascolti, più saranno i suggerimenti</span>
+                        <!-- cards created for jhon -->
+                        <div class="d-flex">
+                            <!-- card -->
+                            <div class="col-6 col-s-3 col-lg-2 card">
+                                <a href="#" class="link">
+                                    <div class="player">
+                                        <img src="assets/img/radar.jpeg" alt="">
+                                        <div class="middle"><i class="fa-regular fa-circle-play"></i></div>
+                                    </div>
+                                </a>
+                                <h3>Release Radar</h3>
+                            </div>
+                            <!-- card -->
+                            <div class="col-6 col-s-3 col-lg-2 card">
+                                <a href="#" class="link">
+                                    <div class="player">
+                                        <img src="assets/img/mixdaily.jpeg" alt="">
+                                        <div class="middle"><i class="fa-regular fa-circle-play"></i></div>
+                                    </div>
+                                </a>
+                                <h3>Daily Mix 1</h3>
                             </div>
                         </div>
-
-                        <div class="for-you">
-                            <h2>Creato per John Doe</h2>
-                            <span>Più ascolti, più saranno i suggerimenti</span>
-                            <div class="d-flex">
-                                <div class="col-6 col-s-3 col-lg-2 card">
-                                    <a href="#" class="link">
-                                        <div class="player">
-                                            <img src="assets/img/radar.jpeg" alt="">
-                                            <div class="middle"><i class="fa-regular fa-circle-play"></i></div>
-                                        </div>
-                                    </a>
-                                    <h3>Release Radar</h3>
-                                </div>
-                                <div class="col-6 col-s-3 col-lg-2 card">
-                                    <a href="#" class="link">
-                                        <div class="player">
-                                            <img src="assets/img/mixdaily.jpeg" alt="">
-                                            <div class="middle"><i class="fa-regular fa-circle-play"></i></div>
-                                        </div>
-                                    </a>
-                                    <h3>Daily Mix 1</h3>
-                                </div>
+                    </div>
+                    <!-- populari -->
+                    <div class="populari">
+                        <h2>Artisti più popolari</h2>
+                        <span>Più ascolti, più saranno i suggerimenti</span>
+                        <!-- populari cards -->
+                        <div class="d-flex">
+                            <!-- card -->
+                            <div class="col-6 col-s-3 col-lg-2 card">
+                                <a href="#" class="link">
+                                    <div class="player">
+                                        <img src="assets/img/youg.jpeg" alt="">
+                                        <div class="middle"><i class="fa-regular fa-circle-play"></i></div>
+                                    </div>
+                                </a>
+                                <h3>Lana del Rey</h3>
                             </div>
-                        </div>
-
-                        <div class="populari">
-                            <h2>Artisti più popolari</h2>
-                            <span>Più ascolti, più saranno i suggerimenti</span>
-                            <div class="d-flex">
-                                <div class="col-6 col-s-3 col-lg-2 card">
-                                    <a href="#" class="link">
-                                        <div class="player">
-                                            <img src="assets/img/youg.jpeg" alt="">
-                                            <div class="middle"><i class="fa-regular fa-circle-play"></i></div>
-                                        </div>
-                                    </a>
-                                    <h3>Lana del Rey</h3>
-                                </div>
-                                <div class="col-6 col-s-3 col-lg-2 card">
-                                    <a href="#" class="link">
-                                        <div class="player">
-                                            <img src="assets/img/einaudi.jpeg" alt="">
-                                            <div class="middle"><i class="fa-regular fa-circle-play"></i></div>
-                                        </div>
-                                    </a>
-                                    <h3>Ludovico Einaudi</h3>
-                                </div>
+                            <!-- card -->
+                            <div class="col-6 col-s-3 col-lg-2 card">
+                                <a href="#" class="link">
+                                    <div class="player">
+                                        <img src="assets/img/einaudi.jpeg" alt="">
+                                        <div class="middle"><i class="fa-regular fa-circle-play"></i></div>
+                                    </div>
+                                </a>
+                                <h3>Ludovico Einaudi</h3>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- bottom of the layout -->
         <div class="bottom">
             <div class="app-bottom">
                 <div class="container container-s">
