@@ -345,15 +345,7 @@ body {
             }
 
             .control-instrument-play {
-                span {
-                    display: none;
-                }
-
-                .control-left,
-                .control-right {
-                    color: var(--title-color);
-                    display: none;
-                }
+                display: none;
             }
         }
 
@@ -361,6 +353,10 @@ body {
             justify-content: end;
 
             .hidden {
+                display: none;
+            }
+
+            .control-instrument-sound {
                 display: none;
             }
         }
@@ -528,32 +524,6 @@ body {
 
 
     .app-bottom {
-
-        .icon-center {
-
-            .control-instrument-play {
-                span {
-                    display: inline;
-                }
-
-                .control-instrument {
-                    border: 2px solid;
-                    width: 200px;
-                    border-radius: 3px;
-                    top: 30px;
-                    right: 50px;
-                }
-
-                .instrument {
-                    background-color: var(--text-color);
-                    width: 20px;
-                    border: 1px solid;
-                }
-            }
-
-        }
-
-
         .icon-rigth {
             i {
                 display: block;
@@ -601,14 +571,84 @@ body {
 
             .icon-center {
                 .control-instrument-play {
+                    display: block;
 
-                    .control-left,
-                    .control-right {
-                        display: block;
+                    input[type='range'] {
+                        -webkit-appearance: none;
+                        appearance: none;
+                        background: transparent;
+                        cursor: pointer;
+                        width: 140px;
+
+                    }
+
+                    input[type="range"]::-webkit-slider-runnable-track {
+                        background: #5f5f5f;
+                        height: 0.4rem;
+                        border-radius: 15px;
+                    }
+
+                    input[type='range']::-webkit-slider-thumb {
+                        -webkit-appearance: none;
+                        height: .4rem;
+                        width: 40px;
+                        border-radius: 15px;
+                        background-color: #c1c1c1;
+                    }
+
+                    label {
+                        color: var(--title-color);
+                        padding: 0 .4rem;
+                        font-size: .7rem;
                     }
                 }
             }
 
+            .icon-rigth {
+                .control-instrument-sound {
+                    display: block;
+
+                    input[type='range'] {
+                        -webkit-appearance: none;
+                        appearance: none;
+                        background: transparent;
+                        cursor: pointer;
+                        width: 80px;
+
+                    }
+
+                    input[type="range"]::-webkit-slider-runnable-track {
+                        background: #5f5f5f;
+                        height: 0.5rem;
+                        border-radius: 15px;
+                    }
+
+                    input[type='range']::-webkit-slider-thumb {
+                        -webkit-appearance: none;
+                        height: .5rem;
+                        width: 20px;
+                        border-radius: 15px;
+                        background-color: #c1c1c1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+    .bottom {
+        .app-bottom {
+            .icon-center {
+                .control-instrument-play {
+                    input[type='range'] {
+                        width: 240px;
+
+                    }
+
+                }
+            }
         }
     }
 }
